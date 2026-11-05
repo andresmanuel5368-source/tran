@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 31</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: white;
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            background: #1e293b;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            color: #38bdf8;
+        }
+
+        h2 {
+            color: #38bdf8;
+        }
+
+        .contenedor {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        button {
+            background: #0284c7;
+            color: white;
+            border: none;
+            padding: 14px;
+            margin: 5px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        button:hover {
+            background: #0369a1;
+        }
+
+        .menu {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .tarjeta {
+            display: none;
+            background: #1e293b;
+            padding: 22px;
+            margin-top: 20px;
+            border-radius: 12px;
+            line-height: 1.7;
+        }
+
+        .tarjeta p {
+            text-align: justify;
+        }
+
+        .inicio {
+            display: block;
+            text-align: center;
+            background: #1e293b;
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        .volver {
+            background: #475569;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 35px;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>RESUMEN DE PWEB_Cursos</h1>
+    <p>Material de estudio de páginas web</p>
+</header>
+
+<div class="contenedor">
+
+    <section id="inicio" class="inicio">
+        <h2>PWEB_Cursos</h2>
+        <p>Selecciona el apartado para consultar los tres resúmenes del curso.</p>
+        <button onclick="mostrarMenu()">Abrir resúmenes</button>
+    </section>
+
+    <section id="menu" class="menu" style="display:none;">
+        <h2>Selecciona un resumen</h2>
+
+        <button onclick="mostrarResumen('resumen1')">
+            Resumen 1: Páginas 1-10
+        </button>
+
+        <button onclick="mostrarResumen('resumen2')">
+            Resumen 2: Páginas 11-20
+        </button>
+
+        <button onclick="mostrarResumen('resumen3')">
+            Resumen 3: Páginas 21-31
+        </button>
+
+        <br>
+        <button class="volver" onclick="volverInicio()">Volver al inicio</button>
+    </section>
+
+    <!-- RESUMEN 1 -->
+
+    <section id="resumen1" class="tarjeta">
+        <h2>Resumen 1: Fundamentos de HTML, Texto, Enlaces e Imágenes</h2>
+        <h3>Páginas 1 a 10</h3>
+
+        <h3>1. Estructura básica de HTML</h3>
+        <p>
+            HTML utiliza etiquetas de apertura y cierre para organizar
+            el contenido de una página web. El documento se divide en
+            HEAD, donde se encuentra información como el título, y BODY,
+            donde aparece el contenido visible. Actualmente se recomienda
+            declarar el tipo de documento con DOCTYPE y utilizar HTML5.
+        </p>
+
+        <h3>2. Formato y diseño del texto</h3>
+        <p>
+            Los párrafos se crean con P y los encabezados van desde H1
+            hasta H6. La etiqueta BR permite saltos de línea y HR crea
+            una separación horizontal. B destaca texto en negrita e I
+            en cursiva. También existen elementos para citas, texto
+            preformateado, superíndices y subíndices.
+        </p>
+
+        <h3>3. Listas</h3>
+        <p>
+            UL crea listas con viñetas, OL crea listas numeradas y LI
+            representa cada elemento. DL permite crear listas de
+            definiciones mediante DT para el término y DD para su
+            descripción. Las listas pueden contener otras listas.
+            Los comentarios HTML se escriben entre &lt;!-- y --&gt;.
+        </p>
+
+        <h3>4. Caracteres especiales</h3>
+        <p>
+            Las entidades HTML permiten mostrar caracteres especiales.
+            Algunos ejemplos son &amp;lt; para el símbolo menor que,
+            &amp;gt; para el mayor que, &amp;amp; para el signo &amp;
+            y &amp;quot; para las comillas. La codificación UTF-8
+            permite representar correctamente letras acentuadas y la ñ.
+        </p>
+
+        <h3>5. Enlaces hipertextuales</h3>
+        <p>
+            La etiqueta A permite crear enlaces mediante HREF.
+            Los enlaces pueden dirigir a otras páginas, sitios externos,
+            secciones de la misma página o direcciones de correo
+            electrónico mediante mailto:. Las rutas relativas permiten
+            acceder a archivos y carpetas del mismo sitio web.
+        </p>
+
+        <h3>6. Imágenes</h3>
+        <p>
+            La etiqueta IMG incorpora imágenes mediante SRC. El atributo
+            ALT proporciona una descripción alternativa. WIDTH y HEIGHT
+            permiten indicar sus dimensiones. Una imagen también puede
+            colocarse dentro de un enlace para que el usuario pueda
+            hacer clic sobre ella.
+        </p>
+
+        <button class="volver" onclick="volverMenu()">Volver a los resúmenes</button>
+    </section>
+
+    <!-- RESUMEN 2 -->
+
+    <section id="resumen2" class="tarjeta">
+        <h2>Resumen 2: Alineación Avanzada, Tablas y Formularios</h2>
+        <h3>Páginas 11 a 20</h3>
+
+        <h3>1. Alineación y tamaño de imágenes</h3>
+        <p>
+            Las imágenes pueden colocarse junto al texto o dentro de
+            diferentes secciones de una página. En HTML tradicional
+            se utilizaba ALIGN para controlar su alineación. WIDTH y
+            HEIGHT permiten especificar el ancho y el alto en píxeles.
+            Las miniaturas son imágenes pequeñas que pueden enlazar
+            a una versión de mayor tamaño.
+        </p>
+
+        <h3>2. Fondos, colores y fuentes</h3>
+        <p>
+            Los colores de una página pueden expresarse mediante
+            códigos hexadecimales, por ejemplo #FF0000 para rojo.
+            HTML antiguo utilizaba BGCOLOR para el fondo y FONT COLOR
+            para el texto. También se podían emplear imágenes como
+            fondo. Actualmente, CSS es la forma recomendada para
+            configurar colores, fuentes y estilos.
+        </p>
+
+        <h3>3. Tablas</h3>
+        <p>
+            TABLE define una tabla, TR crea filas, TD crea celdas y
+            TH representa encabezados. CAPTION agrega un título.
+            COLSPAN permite extender una celda por varias columnas,
+            mientras que ROWSPAN permite extenderla por varias filas.
+            CELLSPACING y CELLPADDING eran atributos tradicionales
+            para controlar los espacios entre celdas y su contenido.
+        </p>
+
+        <h3>4. Formularios</h3>
+        <p>
+            Los formularios recopilan información del usuario.
+            FORM agrupa los campos y puede incluir INPUT, TEXTAREA,
+            SELECT y OPTION. Para procesar los datos de forma real,
+            normalmente se utiliza un servidor o un servicio preparado
+            para recibirlos. Un formulario HTML por sí solo no almacena
+            automáticamente la información ni la envía al correo.
+        </p>
+
+        <h3>5. Elementos interactivos</h3>
+        <p>
+            INPUT TYPE="TEXT" permite escribir texto y TYPE="PASSWORD"
+            oculta los caracteres introducidos. TEXTAREA permite
+            escribir mensajes largos. SELECT y OPTION crean menús
+            desplegables. CHECKBOX permite seleccionar varias opciones,
+            RADIO permite elegir entre opciones de un grupo y los
+            botones SUBMIT y RESET sirven para enviar o restablecer
+            los campos del formulario.
+        </p>
+
+        <button class="volver" onclick="volverMenu()">Volver a los resúmenes</button>
+    </section>
+
+    <!-- RESUMEN 3 -->
+
+    <section id="resumen3" class="tarjeta">
+        <h2>Resumen 3: Mapas Interactivos, Marcos y Multimedia</h2>
+        <h3>Páginas 21 a 31</h3>
+
+        <h3>1. Mapas de imagen interactivos</h3>
+        <p>
+            Los mapas de imagen permiten que diferentes zonas de una
+            imagen dirijan a distintos enlaces. MAP define el mapa,
+            AREA establece las regiones activas y USEMAP relaciona
+            el mapa con la imagen. Las áreas pueden ser rectangulares,
+            circulares o poligonales. Es recomendable incluir enlaces
+            alternativos para facilitar el acceso al contenido.
+        </p>
+
+        <h3>2. Estructura de marcos (Frames)</h3>
+        <p>
+            Los marcos se utilizaban para dividir el navegador en
+            diferentes paneles que podían mostrar páginas distintas.
+            FRAMESET organizaba los paneles mediante COLS o ROWS,
+            mientras que FRAME indicaba el contenido de cada uno.
+            NAME identificaba un marco y TARGET permitía abrir un
+            enlace en el panel deseado.
+        </p>
+
+        <h3>3. Atributos avanzados de marcos</h3>
+        <p>
+            Los marcos tradicionales permitían configurar los márgenes,
+            las barras de desplazamiento, los bordes y la posibilidad
+            de cambiar el tamaño de los paneles. Entre sus atributos
+            estaban MARGINWIDTH, MARGINHEIGHT, SCROLLING y NORESIZE.
+            Los valores _blank, _self y _top controlaban dónde se
+            abrían los enlaces. FRAMESET y FRAME ya no forman parte
+            del HTML moderno; actualmente se prefieren CSS y diseños
+            adaptables.
+        </p>
+
+        <h3>4. Integración y reproducción de sonido</h3>
+        <p>
+            Las páginas web pueden incorporar audio para que el usuario
+            escuche música, efectos o grabaciones. En documentos antiguos
+            se utilizaban BGSOUND y EMBED, pero no son opciones
+            recomendadas para páginas actuales. HTML5 incorpora AUDIO,
+            que permite añadir controles para reproducir, pausar y
+            ajustar el sonido. Es recomendable que el usuario controle
+            la reproducción y que el audio no comience inesperadamente.
+        </p>
+
+        <h3>5. Ejemplo de aplicación</h3>
+        <p>
+            Los temas estudiados permiten construir páginas web con
+            texto, imágenes, enlaces, tablas, formularios, mapas
+            interactivos y multimedia. Para desarrollar un sitio
+            moderno se recomienda utilizar HTML5 para estructurar
+            el contenido, CSS para el diseño y JavaScript para agregar
+            funciones interactivas.
+        </p>
+
+        <button class="volver" onclick="volverMenu()">Volver a los resúmenes</button>
+    </section>
+
+</div>
+
+<marquee>farruko-mon-nenis</marquee>
+
+<script>
+    function mostrarMenu() {
+        document.getElementById("inicio").style.display = "none";
+        document.getElementById("menu").style.display = "block";
+    }
+
+    function ocultarResúmenes() {
+        document.getElementById("resumen1").style.display = "none";
+        document.getElementById("resumen2").style.display = "none";
+        document.getElementById("resumen3").style.display = "none";
+    }
+
+    function mostrarResumen(id) {
+        ocultarResúmenes();
+        document.getElementById("menu").style.display = "none";
+        document.getElementById(id).style.display = "block";
+    }
+
+    function volverMenu() {
+        ocultarResúmenes();
+        document.getElementById("menu").style.display = "block";
+    }
+
+    function volverInicio() {
+        ocultarResúmenes();
+        document.getElementById("menu").style.display = "none";
+        document.getElementById("inicio").style.display = "block";
+    }
+</script>
+
+</body>
+</html>
